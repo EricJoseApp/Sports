@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         //Variable destino para tener acceso a las variables de destino
         let destino = segue.destination as? ViewControllerCorrer
 
-        if segue.identifier == "identifierCorrer" {
+        if segue.identifier == "Correr" {
 
             destino?.navigationItem.title = "Actividad Correr"
             destino?.act = "correr"
