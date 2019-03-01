@@ -9,14 +9,10 @@
 import UIKit
 import MapKit
 import CoreLocation
-import Firebase
+
 
 class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-  
-    
-    
-
 
     //Variables con las que guardamos los datos en Firebase
     var arrayCoordenadas: Array<CLLocationCoordinate2D> = []
@@ -110,24 +106,27 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
         
         return b
     }
+    
+    //Funcion que convierte Date a String
+    func convertirFechaAstring (fecha: Date) -> String {
+        
+        let dato = DateFormatter()
+        
+        // Formateo la variable
+        dato.dateFormat = "yyyy-MM-dd"
+        
+        //Convierto la fecha a string
+        let fechaConvertida = dato.string(from: fecha)
+        
+        return fechaConvertida
+        
+        
+    }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        let formatter = DateFormatter()
-        // initially set the format based on your datepicker date / server String
-        formatter.dateFormat = "yyyy-MM-dd"
-        
-        let myString = formatter.string(from: Date()) // string purpose I add here
-        // convert your string to date
-        let yourDate = formatter.date(from: myString)
-        //then again set the date format whhich type of output you need
-        formatter.dateFormat = "dd-MMM-yyyy"
-        // again convert your date to string
-        let myStringafd = formatter.string(from: yourDate!)
-
         etiquetaMap.showsUserLocation = true
 
         etiquetaMap.delegate = self
@@ -194,8 +193,10 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
 
         if segue.identifier == "guardarCorrer" {
             
+            //Paro el GPS localizacion
             locationManager.stopUpdatingLocation()
             
+            //Variable destino para acceso
             let destino = segue.destination as! ViewController;
             
             distancia = distanciaRecorrida(arrayCoordenadas)
@@ -214,7 +215,7 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
                 "coordenadas": coordenadas,
                 "distancia": distancia,
                 "duración": duracion,
-                "fecha": date,
+                "fecha": convertirFechaAstring(fecha: date),
                 ]) { err in
                 if let err = err {
                     print("Error adding document: \(err)")
