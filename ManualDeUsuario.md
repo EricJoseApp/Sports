@@ -46,19 +46,22 @@ detalle de la actividad, el mapa con el recorrido y los datos de esa activdad.
 
 ![](Imágenes/Actividadessinfecha.png) 
 
+## Detalle de la actividad
 
+Selecioanda la celda/actividad a consultar el usuario podrá visualizar en detalle accediendo a la escena de detalle
+qué recorrido realizó, la fecha, la duración, la fecha y la distancia.
 
+![](Imágenes/Recorrido2.png) 
 
+## Documentación
 
-
-Selecciona
 * [CocoaPods - Firebase](https://cocoapods.org/pods/Firebase)
-* [Agregar proyecto a Firebase](https://console.firebase.google.com/project/pruebafirebase-d6c51/overview)
+* [Firebase](https://console.firebase.google.com)
 * [Firebase.Google - Firestore](https://firebase.google.com/docs/firestore/quickstart?hl=es-419)
 * [Tutorial YouTube - Ion Jaureguialzo](https://www.youtube.com/watch?v=gIFl3YvMOdM)
+* [MapKit](https://developer.apple.com/documentation/mapkit)
+* [Swift](https://developer.apple.com/swift/)
 
-#### TableView
-* [Eureka - get-row-value](https://www.youtube.com/watch?v=McvWQOS695M)
-* [Tutorial YouTube - Ion Jaureguialzo](https://www.youtube.com/watch?v=McvWQOS695M)
+
 
 
