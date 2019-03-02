@@ -17,12 +17,41 @@ completando.
 Además de esto tiene diseñado un historial de actividades completadas donde se podrá consultar la fecha de la actividad,
 la duración y la distancia completada, asi como la eliminación de la misma.
 
- ## Manual de usuario
+ ## Menú inicio
  
 La aplicación comienza con una escena inicial/menú inicial donde se muestran las distintas actividades que puede realizar
 el usuario y el acceso al historial de actividades.
 
 ![](Imágenes/Menu.png) 
+
+## Escena actividad
+
+Seleccionada la actividad deseada el usuario visualizará una escena en la cual podrá ver su ubicación en un mapa, tendrá 
+acceso a las funcionalidades de los botones de start, pausar y reset que inician el cronómetro y podrá salvar la actividad
+pulsando el botón save.
+
+Por otro lado toda escena de actividad ofrece la opción de volver al menú inicial pulsando dicho botón.
+
+![](Imágenes/Ciclismo.png) 
+
+## Historial de actividades
+
+Salvada la actividad en la escena anterior, todos los datos se guardarán en tiempo real en Firebase de donde el TableViewController
+de la escena historia de actividades recuperará para mostrarlos en las celdas de dicha tabla. Cada celda mostrará la información
+de la actividad, la fecha en que se completó, la duración y la distancia.
+
+También se podrá seleccionar la celda mediante el botón edit que dará la posibilidad de eliminarla de la base de datos y 
+a parte también se le ofrece al usuario la posibilidad de seleccionar una celda clicando en ella para ver en otra escena,
+detalle de la actividad, el mapa con el recorrido y los datos de esa activdad.
+
+![](Imágenes/Actividades sin fecha.png) 
+
+
+
+
+
+
+Selecciona
 * [CocoaPods - Firebase](https://cocoapods.org/pods/Firebase)
 * [Agregar proyecto a Firebase](https://console.firebase.google.com/project/pruebafirebase-d6c51/overview)
 * [Firebase.Google - Firestore](https://firebase.google.com/docs/firestore/quickstart?hl=es-419)
