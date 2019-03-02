@@ -35,8 +35,8 @@
         <entry file="file://$PROJECT_DIR$/ManualDeUsuario.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="408">
-                <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+              <first_editor relative-caret-position="276">
+                <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
               </first_editor>
               <second_editor />
             </state>
@@ -126,7 +126,8 @@
     <option name="totallyTimeSpent" value="2963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="14" y="3" width="1386" height="788" extended-state="1" />
+    <frame x="14" y="3" width="1386" height="788" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17062314" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -169,8 +170,8 @@
     <entry file="file://$PROJECT_DIR$/ManualDeUsuario.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="408">
-            <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <first_editor relative-caret-position="276">
+            <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
           </first_editor>
           <second_editor />
         </state>

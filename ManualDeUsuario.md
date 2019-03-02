@@ -3,7 +3,7 @@
 # AppSports
 
 AppSports en una aplicación móvil para IOS diseñada en el entorno de desarrollo de Xcode
-y en lenguaje de programación Swifth 4.
+y en lenguaje de programación Swift 4.
 
 
 ## Funcionalidad
@@ -22,7 +22,7 @@ la duración y la distancia completada, asi como la eliminación de la misma.
 La aplicación comienza con una escena inicial/menú inicial donde se muestran las distintas actividades que puede realizar
 el usuario y el acceso al historial de actividades.
 
-[](Imágenes/Menu.png) 
+![](Imágenes/Menu.png) 
 * [CocoaPods - Firebase](https://cocoapods.org/pods/Firebase)
 * [Agregar proyecto a Firebase](https://console.firebase.google.com/project/pruebafirebase-d6c51/overview)
 * [Firebase.Google - Firestore](https://firebase.google.com/docs/firestore/quickstart?hl=es-419)
