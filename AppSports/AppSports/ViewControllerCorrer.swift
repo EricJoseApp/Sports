@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
 
 
 class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
@@ -27,29 +28,35 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
 
     //Variable CllocationManager()
     let locationManager = CLLocationManager()
-
-    //Cronómetro
-
+    
+    //Variables de control para el cronometro
     var timer = Timer()
     var horas = 0
     var minutos = 0
     var segundos = 0
     var tiempo = ""
 
+    //Etiqueta label para el cronometro
     @IBOutlet weak var cronometro: UILabel!
 
+    //Cronómetro
     @IBAction func iniciar(_ sender: Any) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewControllerCorrer.action), userInfo: nil, repeats: true)
+        
+        //Inicio la localizacion y muestro la loc del usuario
         locationManager.startUpdatingLocation()
         etiquetaMap.showsUserLocation = true
     }
 
     @IBAction func pausar(_ sender: Any) {
         timer.invalidate()
+        
+        //Paro la localizacion y dejo de mostrar la loc del usuario
         locationManager.stopUpdatingLocation()
         etiquetaMap.showsUserLocation = false
     }
 
+    //Funcion para poner a cero el crono
     @IBAction func reset(_ sender: Any) {
         cronometro.text = "0"
         segundos = 0
@@ -69,6 +76,7 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
 
         segundos += 1
 
+        //Formateo el texto del crono
         cronometro.text = String(format: "%02d:%02d:%02d", horas, minutos, segundos)
         duracion = String(format: "%02d:%02d:%02d", horas, minutos, segundos)
     }
@@ -107,7 +115,7 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
         return b
     }
     
-    //Funcion que convierte Date a String
+    //Funcion que convierte un dato tipo Date a String
     func convertirFechaAstring (fecha: Date) -> String {
         
         let dato = DateFormatter()
@@ -150,7 +158,6 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
     }
 
     // MARK:- CLLocationManager Delegates
-
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
         self.etiquetaMap.setRegion(region, animated: true)
@@ -191,6 +198,7 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        //Identifico el segue
         if segue.identifier == "guardarCorrer" {
             
             //Paro el GPS localizacion
@@ -209,12 +217,12 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
             //Guardar datos en Firestore Add a new document with a generated ID
             var ref: DocumentReference? = nil
             
-            
+            //Variabe para la referencia de la coleccion de datos de Firebase y añado datos
             ref = db.collection("actividades").addDocument(data: [
                 "actividad": act,
                 "coordenadas": coordenadas,
-                "distancia": distancia,
-                "duración": duracion,
+                "distancia": distancia + " km",
+                "duración": duracion + " h",
                 "fecha": convertirFechaAstring(fecha: date),
                 ]) { err in
                 if let err = err {
