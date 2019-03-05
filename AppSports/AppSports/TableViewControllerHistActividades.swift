@@ -216,7 +216,6 @@ class TableViewControllerHistActividades: UITableViewController {
             destino?.dur = dur
             destino?.coordenadas = co
 
-
         }
 
 

@@ -23,30 +23,30 @@ class ViewController: UIViewController {
         print("Guardado")
     }
 
-
-    // Funcion prepare para hacer controlar los datos antes de la navegacion
+    // Funcion prepare para controlar los datos antes de la navegacion
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        //Variable destino para tener acceso a las variables de destino
+        // Variable destino para tener acceso a las variables de destino
         let destino = segue.destination as? ViewControllerCorrer
 
+        // Identifico los identifiers de los shows para acceder a las etiquetas de destino y titulos del View
         if segue.identifier == "Correr" {
 
             destino?.navigationItem.title = "Actividad Correr"
-            destino?.act = "correr"
+            destino?.act = "Correr"
 
         } else if segue.identifier == "identifierAndar" {
-            
+
             destino?.navigationItem.title = "Actividad Andar"
-            destino?.act = "andar"
-            
-    
+            destino?.act = "Andar"
+
+
         } else if segue.identifier == "identifierCiclismo" {
-            
+
             destino?.navigationItem.title = "Actividad Ciclismo"
-            destino?.act = "ciclismo"
-            
-            
+            destino?.act = "Ciclismo"
+
+
         }
 
     }

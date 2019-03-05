@@ -13,16 +13,10 @@ import Firebase
 
 class DetalleActividadViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
-    // Clase para pintar
-    class MyPointAnnotation: MKPointAnnotation {
-        var pinTintColor: UIColor?
-    }
-
 
     //Acceso al mapView
     @IBOutlet weak var etiquetaMapView: MKMapView!
-
-
+    
 
     //Variables de control para el map y polilyne
     var locationManager = CLLocationManager()
@@ -86,15 +80,6 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
             testcoords.append(CLLocationCoordinate2D(latitude: c.latitude, longitude: c.longitude))
         }
 
-
-
-        // Añado co-ordinates para el  poly line
-        /*let coords1 = CLLocationCoordinate2D(latitude: 42.846667, longitude: -2.673056) // Vitoria
-        let coords2 = CLLocationCoordinate2D(latitude: 40.418889, longitude: -3.691944) // Madrid
-        let coords3 = CLLocationCoordinate2D(latitude: 37.383333, longitude: -5.983333) // Sevilla
-        
-        testcoords = [coords1, coords2, coords3]*/
-
         dibujar()
 
         determineCurrentLocation() // updating current location method
@@ -114,31 +99,25 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
         let testline = MKPolyline(coordinates: testcoords, count: testcoords.count)
         etiquetaMapView.addOverlay(testline)
 
-
-
         // Dibujar las chinchetas
         for each in 0..<testcoords.count {
             let anno = MKPointAnnotation()
-            let pinColor = MyPointAnnotation()
-
+            
 
             // Calculo el inicio y final de las coordenadas para señailzar inicio y fin de recorrido
             if each == 0 {
-                print(each)
                 anno.title = "Start"
-                pinColor.pinTintColor = .green
                 anno.coordinate = testcoords[each]
             }
 
             if each == testcoords.count - 1 {
                 print(each)
                 anno.title = "End"
-                pinColor.pinTintColor = .red
                 anno.coordinate = testcoords[each]
             }
 
             etiquetaMapView.addAnnotation(anno as MKAnnotation)
-            etiquetaMapView.addAnnotation(pinColor as MKAnnotation)
+
 
         }
     }
@@ -167,6 +146,9 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
         }
         fatalError("Something wrong...")
     }
+
+
+    
 
     /*
     // MARK: - Navigation
