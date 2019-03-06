@@ -44,14 +44,14 @@ También se podrá seleccionar la celda mediante el botón edit que dará la pos
 a parte también se le ofrece al usuario la posibilidad de seleccionar una celda clicando en ella para ver en otra escena,
 detalle de la actividad, el mapa con el recorrido y los datos de esa activdad.
 
-![](Imágenes/historial.png) 
+![](Imágenes/historial.png)
 
 ## Detalle de la actividad
 
 Selecionada la celda/actividad a consultar el usuario podrá visualizar en detalle accediendo a la escena de detalle
 qué recorrido realizó, la fecha, la duración, la fecha y la distancia.
 
-![](Imágenes/r2.jpeg) 
+![](Imágenes/r2.jpeg)
 
 ## Documentación
 
