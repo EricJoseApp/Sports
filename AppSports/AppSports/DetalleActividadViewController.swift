@@ -53,7 +53,7 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
             arrayCllocation.append(CLLocationCoordinate2D(latitude: punto.latitude, longitude: punto.longitude))
         }
 
-        //Funcion setUp
+        // Funcion setUp
         setUp()
 
     }
@@ -111,8 +111,7 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
             }
 
             if each == testcoords.count - 1 {
-                print(each)
-                anno.title = "End"
+                anno.title = "Finish"
                 anno.coordinate = testcoords[each]
             }
 
