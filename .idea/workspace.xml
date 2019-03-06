@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="171f9d82-4fca-4694-8966-c5fc9ec09af3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Sports.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sports.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppSports/AppSports.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppSports/AppSports.xcworkspace/xcuserdata/8fdam09.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports.xcworkspace/xcuserdata/8fdam09.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppSports/AppSports/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppSports/AppSports/TableViewControllerHistActividades.swift" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports/TableViewControllerHistActividades.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppSports/AppSports/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports/ViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppSports/AppSports/DetalleActividadViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports/DetalleActividadViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ManualDeUsuario.md" beforeDir="false" afterPath="$PROJECT_DIR$/ManualDeUsuario.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,8 +37,8 @@
         <entry file="file://$PROJECT_DIR$/ManualDeUsuario.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="945">
-                <caret line="56" selection-start-line="56" selection-end-line="56" />
+              <first_editor relative-caret-position="652">
+                <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -56,11 +58,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-188" />
-    <option name="y" value="3" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -78,7 +79,7 @@
             <path>
               <item name="Sports" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sports" type="462c0819:PsiDirectoryNode" />
-              <item name="Imágenes" type="462c0819:PsiDirectoryNode" />
+              <item name="Imágenes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -126,10 +127,10 @@
     <option name="totallyTimeSpent" value="2963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="23" width="1920" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17559524" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1773163" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -144,6 +145,8 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="right" id="R Packages" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -170,8 +173,8 @@
     <entry file="file://$PROJECT_DIR$/ManualDeUsuario.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="945">
-            <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <first_editor relative-caret-position="652">
+            <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>

@@ -82,7 +82,7 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
 
         dibujar()
 
-        determineCurrentLocation() // updating current location method
+        //determineCurrentLocation() // updating current location method
     }
 
     // Actualizacion del la localizacion
@@ -99,6 +99,9 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
         let testline = MKPolyline(coordinates: testcoords, count: testcoords.count)
         etiquetaMapView.addOverlay(testline)
 
+        etiquetaMapView.setRegion(MKCoordinateRegion(coordinates:testcoords), animated: true)
+
+        
         // Dibujar las chinchetas
         for each in 0..<testcoords.count {
             let anno = MKPointAnnotation()
@@ -117,8 +120,10 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
 
             etiquetaMapView.addAnnotation(anno as MKAnnotation)
 
-
         }
+        
+        //self.etiquetaMapView.showAnnotations(etiquetaMapView.annotations, animated: true)
+        
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -159,4 +164,35 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
     }
     */
 
+}
+
+// Ref: https://gist.github.com/robmooney/923301
+extension MKCoordinateRegion {
+    init(coordinates: [CLLocationCoordinate2D]) {
+        var minLat: CLLocationDegrees = 90.0
+        var maxLat: CLLocationDegrees = -90.0
+        var minLon: CLLocationDegrees = 180.0
+        var maxLon: CLLocationDegrees = -180.0
+        
+        for coordinate in coordinates {
+            let lat = Double(coordinate.latitude)
+            let long = Double(coordinate.longitude)
+            if lat < minLat {
+                minLat = lat
+            }
+            if long < minLon {
+                minLon = long
+            }
+            if lat > maxLat {
+                maxLat = lat
+            }
+            if long > maxLon {
+                maxLon = long
+            }
+        }
+        
+        let span = MKCoordinateSpan(latitudeDelta: (maxLat - minLat)*2.0, longitudeDelta: (maxLon - minLon)*2.0)
+        let center = CLLocationCoordinate2DMake(maxLat - span.latitudeDelta / 4, maxLon - span.longitudeDelta / 4)
+        self.init(center: center, span: span)
+    }
 }

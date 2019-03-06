@@ -18,7 +18,6 @@
 		C258C3E621F8BCB7003DC6F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C258C3E421F8BCB7003DC6F4 /* LaunchScreen.storyboard */; };
 		C26E1BAB22022E6200768674 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C26E1BAA22022E6200768674 /* GoogleService-Info.plist */; };
 		C26E1BAD220234EE00768674 /* TableViewControllerHistActividades.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E1BAC220234EE00768674 /* TableViewControllerHistActividades.swift */; };
-		C26E1BAF2202361900768674 /* TableViewCellActividad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E1BAE2202361900768674 /* TableViewCellActividad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		C258C3E721F8BCB7003DC6F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C26E1BAA22022E6200768674 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C26E1BAC220234EE00768674 /* TableViewControllerHistActividades.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerHistActividades.swift; sourceTree = "<group>"; };
-		C26E1BAE2202361900768674 /* TableViewCellActividad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellActividad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 				C258C3E721F8BCB7003DC6F4 /* Info.plist */,
 				C23599DF21FB7C4200201789 /* ViewControllerCorrer.swift */,
 				C26E1BAC220234EE00768674 /* TableViewControllerHistActividades.swift */,
-				C26E1BAE2202361900768674 /* TableViewCellActividad.swift */,
 				C234EFD02215CE3900E0E659 /* ItemTableViewCell.swift */,
 				C2079754221DD73D00499138 /* DetalleActividadViewController.swift */,
 			);
@@ -272,7 +269,6 @@
 			files = (
 				C258C3DE21F8BCB6003DC6F4 /* ViewController.swift in Sources */,
 				C23599E021FB7C4200201789 /* ViewControllerCorrer.swift in Sources */,
-				C26E1BAF2202361900768674 /* TableViewCellActividad.swift in Sources */,
 				C234EFD12215CE3A00E0E659 /* ItemTableViewCell.swift in Sources */,
 				C258C3DC21F8BCB6003DC6F4 /* AppDelegate.swift in Sources */,
 				C26E1BAD220234EE00768674 /* TableViewControllerHistActividades.swift in Sources */,
