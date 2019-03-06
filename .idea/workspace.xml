@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="171f9d82-4fca-4694-8966-c5fc9ec09af3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Sports.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sports.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppSports/AppSports.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppSports/AppSports.xcworkspace/xcuserdata/8fdam09.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports.xcworkspace/xcuserdata/8fdam09.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppSports/AppSports/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppSports/AppSports/DetalleActividadViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports/DetalleActividadViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppSports/AppSports/ViewControllerCorrer.swift" beforeDir="false" afterPath="$PROJECT_DIR$/AppSports/AppSports/ViewControllerCorrer.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ManualDeUsuario.md" beforeDir="false" afterPath="$PROJECT_DIR$/ManualDeUsuario.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -37,8 +34,8 @@
         <entry file="file://$PROJECT_DIR$/ManualDeUsuario.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="652">
-                <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+              <first_editor relative-caret-position="646">
+                <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               </first_editor>
               <second_editor />
             </state>
@@ -58,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1920" />
     <option name="height" value="977" />
@@ -173,8 +170,8 @@
     <entry file="file://$PROJECT_DIR$/ManualDeUsuario.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="652">
-            <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+          <first_editor relative-caret-position="646">
+            <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>

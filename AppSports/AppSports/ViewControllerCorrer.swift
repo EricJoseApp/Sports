@@ -36,6 +36,8 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
     var segundos = 0
     var tiempo = ""
 
+    var recogerDatos = false
+    
     //Etiqueta label para el cronometro
     @IBOutlet weak var cronometro: UILabel!
 
@@ -43,6 +45,7 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
     @IBAction func iniciar(_ sender: Any) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewControllerCorrer.action), userInfo: nil, repeats: true)
 
+        recogerDatos = true
         //Inicio la localizacion y muestro la loc del usuario
         locationManager.startUpdatingLocation()
         etiquetaMap.showsUserLocation = true
@@ -51,6 +54,7 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
     @IBAction func pausar(_ sender: Any) {
         timer.invalidate()
 
+        recogerDatos = false
         //Paro la localizacion y dejo de mostrar la loc del usuario
         locationManager.stopUpdatingLocation()
         etiquetaMap.showsUserLocation = false
@@ -58,9 +62,11 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
 
     //Funcion para poner a cero el crono
     @IBAction func reset(_ sender: Any) {
-        cronometro.text = "0"
+        cronometro.text = "00:00:00"
         segundos = 0
         arrayCoordenadas.removeAll()
+        
+        recogerDatos = false
     }
 
     @objc func action() {
@@ -159,6 +165,7 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: locations[0].coordinate.latitude, longitude: locations[0].coordinate.longitude), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
         self.etiquetaMap.setRegion(region, animated: true)
 
+        if(recogerDatos) {
 
         //Relleno el array de coordenadas
         arrayCoordenadas.append(locations[0].coordinate)
@@ -167,7 +174,7 @@ class ViewControllerCorrer: UIViewController, CLLocationManagerDelegate, MKMapVi
         let annotation2 = MKPolyline(coordinates: arrayCoordenadas, count: arrayCoordenadas.count)
 
         etiquetaMap.addOverlay(annotation2)
-
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

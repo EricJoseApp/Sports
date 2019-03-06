@@ -32,7 +32,7 @@ pulsando el botón save.
 
 Por otro lado toda escena de actividad ofrece la opción de volver al menú inicial pulsando dicho botón.
 
-![](Imágenes/Ciclismo.png) 
+![](Imágenes/Ciclismo2.png) 
 
 ## Historial de actividades
 
@@ -48,10 +48,10 @@ detalle de la actividad, el mapa con el recorrido y los datos de esa activdad.
 
 ## Detalle de la actividad
 
-Selecioanda la celda/actividad a consultar el usuario podrá visualizar en detalle accediendo a la escena de detalle
+Selecionada la celda/actividad a consultar el usuario podrá visualizar en detalle accediendo a la escena de detalle
 qué recorrido realizó, la fecha, la duración, la fecha y la distancia.
 
-![](Imágenes/recorridoCentrado.png) 
+![](Imágenes/recorridoA.png) 
 
 ## Documentación
 
