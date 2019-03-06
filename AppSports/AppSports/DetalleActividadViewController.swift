@@ -18,11 +18,10 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
     @IBOutlet weak var etiquetaMapView: MKMapView!
     
 
-
     //Variables de control para el map y polilyne
     var locationManager = CLLocationManager()
     var testcoords: [CLLocationCoordinate2D] = []
-    
+
     //Acceso a los labels
     @IBOutlet weak var etiquetaNombreActividad: UILabel!
     @IBOutlet weak var etiquetaDuracion: UILabel!
@@ -45,7 +44,7 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
 
         //Doy valor a los labels
         etiquetaDistancia.text = d
-        etiquetaNombreActividad.text = nom
+        //etiquetaNombreActividad.text = nom
         etiquetaDuracion.text = dur
         etiquetafecha.text = f
 
@@ -53,82 +52,88 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
         for punto in coordenadas {
             arrayCllocation.append(CLLocationCoordinate2D(latitude: punto.latitude, longitude: punto.longitude))
         }
-        
-        
-        //Funcion setUp
+
+        // Funcion setUp
         setUp()
 
-
-
     }
-    
-    
+
+
     //Set up LocationManager y MapView
     func setUp() {
-        
+
         // location manager
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
-        
+
         // Map view settings
         etiquetaMapView.delegate = self
         etiquetaMapView.mapType = MKMapType.standard
         etiquetaMapView.isZoomEnabled = true
         etiquetaMapView.isScrollEnabled = true
         //etiquetaMapView.center = view.center
-        
+
         // Recorro el array de Cllocation para añadir sus coodenadas a testcoords
         for c in arrayCllocation {
-            testcoords.append(CLLocationCoordinate2D(latitude:c.latitude, longitude:c.longitude))
+            testcoords.append(CLLocationCoordinate2D(latitude: c.latitude, longitude: c.longitude))
         }
-        
-    
-        
-        // Añado co-ordinates para el  poly line
-        /*let coords1 = CLLocationCoordinate2D(latitude: 42.846667, longitude: -2.673056) // Vitoria
-        let coords2 = CLLocationCoordinate2D(latitude: 40.418889, longitude: -3.691944) // Madrid
-        let coords3 = CLLocationCoordinate2D(latitude: 37.383333, longitude: -5.983333) // Sevilla
-        
-        testcoords = [coords1, coords2, coords3]*/
-        
+
         dibujar()
-        
-        determineCurrentLocation() // updating current location method
+
+        //determineCurrentLocation() // updating current location method
     }
-    
-    
-    //Step 5. Update to current location
+
+    // Actualizacion del la localizacion
     func determineCurrentLocation() {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
-            
         }
     }
-    
+
+    // Funcion que dibuja la linea del recorrido en el mapa
     func dibujar() {
-        
+
         // Dibujar la línea
         let testline = MKPolyline(coordinates: testcoords, count: testcoords.count)
         etiquetaMapView.addOverlay(testline)
+
+        etiquetaMapView.setRegion(MKCoordinateRegion(coordinates:testcoords), animated: true)
+
         
         // Dibujar las chinchetas
-        /*for each in 0..<testcoords.count {
+        for each in 0..<testcoords.count {
             let anno = MKPointAnnotation()
-            anno.coordinate = testcoords[each]
+            
+
+            // Calculo el inicio y final de las coordenadas para señailzar inicio y fin de recorrido
+            if each == 0 {
+                anno.title = "Start"
+                anno.coordinate = testcoords[each]
+            }
+
+            if each == testcoords.count - 1 {
+                anno.title = "Finish"
+                anno.coordinate = testcoords[each]
+            }
+
             etiquetaMapView.addAnnotation(anno as MKAnnotation)
-        }*/
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+        }
         
+        //self.etiquetaMapView.showAnnotations(etiquetaMapView.annotations, animated: true)
+        
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
         // Recibir las actualizaciones de posición del GPS y centrar el mapa
         let userLocation: CLLocation = locations[0] as CLLocation
         let center = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)) // Nivel de zoom (estaba a 0.1)
         etiquetaMapView.setRegion(region, animated: true)
-        
+
         //locationManager.stopUpdatingLocation() // Esto para el GPS, no recibimos más actualizaciones
     }
 
@@ -146,6 +151,9 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
         fatalError("Something wrong...")
     }
 
+
+    
+
     /*
     // MARK: - Navigation
 
@@ -156,4 +164,35 @@ class DetalleActividadViewController: UIViewController, CLLocationManagerDelegat
     }
     */
 
+}
+
+// Ref:https://gist.github.com/robmooney/923301
+extension MKCoordinateRegion {
+    init(coordinates: [CLLocationCoordinate2D]) {
+        var minLat: CLLocationDegrees = 90.0
+        var maxLat: CLLocationDegrees = -90.0
+        var minLon: CLLocationDegrees = 180.0
+        var maxLon: CLLocationDegrees = -180.0
+        
+        for coordinate in coordinates {
+            let lat = Double(coordinate.latitude)
+            let long = Double(coordinate.longitude)
+            if lat < minLat {
+                minLat = lat
+            }
+            if long < minLon {
+                minLon = long
+            }
+            if lat > maxLat {
+                maxLat = lat
+            }
+            if long > maxLon {
+                maxLon = long
+            }
+        }
+        
+        let span = MKCoordinateSpan(latitudeDelta: (maxLat - minLat)*2.0, longitudeDelta: (maxLon - minLon)*2.0)
+        let center = CLLocationCoordinate2DMake(maxLat - span.latitudeDelta / 4, maxLon - span.longitudeDelta / 4)
+        self.init(center: center, span: span)
+    }
 }
