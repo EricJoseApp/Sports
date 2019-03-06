@@ -51,7 +51,7 @@ detalle de la actividad, el mapa con el recorrido y los datos de esa activdad.
 Selecionada la celda/actividad a consultar el usuario podrá visualizar en detalle accediendo a la escena de detalle
 qué recorrido realizó, la fecha, la duración, la fecha y la distancia.
 
-![](Imágenes/r.png) 
+![](Imágenes/r2.jpeg) 
 
 ## Documentación
 
