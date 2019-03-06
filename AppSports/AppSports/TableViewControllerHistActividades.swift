@@ -212,7 +212,7 @@ class TableViewControllerHistActividades: UITableViewController {
             // Accedo a las etiquetas (Labels) del destino y les doy valor
             destino?.f = fech
             destino?.d = dist
-            destino?.nom = nameAct
+            //destino?.nom = nameAct
             destino?.dur = dur
             destino?.coordenadas = co
 
