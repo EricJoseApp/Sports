@@ -46,7 +46,7 @@ También se podrá seleccionar la celda mediante el botón edit que dará la pos
 a parte también se le ofrece al usuario la posibilidad de seleccionar una celda clicando en ella para ver en otra escena,
 detalle de la actividad, el mapa con el recorrido y los datos de esa activdad.
 
-![](FotosManual/historial.PNG)
+![](FotosManual/historial.png)
 
 
 ## Detalle de la actividad
