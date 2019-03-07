@@ -22,7 +22,7 @@ la duración y la distancia completada, asi como la eliminación de la misma.
 La aplicación comienza con una escena inicial/menú inicial donde se muestran las distintas actividades que puede realizar
 el usuario y el acceso al historial de actividades.
 
-![](Imágenes/Menu.png) 
+![](Imagenes/Menu.png) 
 
 ## Escena actividad
 
@@ -32,7 +32,9 @@ pulsando el botón save.
 
 Por otro lado toda escena de actividad ofrece la opción de volver al menú inicial pulsando dicho botón.
 
-![](Imágenes/ciclismo2.png) 
+
+![](Imagenes/ciclismo2.PNG)
+
 
 ## Historial de actividades
 
