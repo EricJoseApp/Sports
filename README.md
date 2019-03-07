@@ -16,9 +16,9 @@ Este  repositorio contiene toda la información sobre el proyecto de desarrollo 
   * Seleccionar tres deportes distintos. 
   * Podrá tener acceso a su historial de actividades las cuales se guardarán remotamente utilizano la herramienta **Firebase**.
   * Seleccionando cada uno de los deportes el usuario podrá observar en un mapa por dónde se está moviendo,
-  el tiempo transcurrido de la actividad, la distancia y las calorías consumidas.
+  el tiempo transcurrido de la actividad, la distancia y la duración.
   * Una vez parada la actividad se podrá guardar o descartar.
-  * Accediento al historial, se podrá observar la fecha de la actividad, distancia, tiempo, calorías y el mapa 
+  * Accediento al historial, se podrá observar la fecha de la actividad, distancia, duración y el mapa 
   con el recorrido realizado.
 
 * ### Boceto de la interfaz de usuario y diagramas de interacción.
@@ -40,7 +40,7 @@ Este  repositorio contiene toda la información sobre el proyecto de desarrollo 
 | :---------: |:---------------------: | :----------------------:|
 | Enero 9/30 | Primera: KickStar | Selección propuesta, lista de requisitos, boceto interfaz de usuario    |
 | Enero/Febrero 30/20 | Segunda: desarrollo   | Desarrollo de la codificación e interfacesde usuario  |
-| Febrero/Marzo 20/3 | Tercera: Desarrollo del MVP | Publicación, pruebas, revisión.   |
+| Febrero/Marzo 20/6 | Tercera: Desarrollo del MVP | Publicación, pruebas, revisión.   |
 
    
 
