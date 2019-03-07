@@ -33,7 +33,7 @@ pulsando el botón save.
 Por otro lado toda escena de actividad ofrece la opción de volver al menú inicial pulsando dicho botón.
 
 
-![](Imagenes/ciclismo2.PNG)
+![](FotosManual/ciclismo2.png)
 
 
 ## Historial de actividades
