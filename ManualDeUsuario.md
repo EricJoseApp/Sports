@@ -22,7 +22,7 @@ la duración y la distancia completada, asi como la eliminación de la misma.
 La aplicación comienza con una escena inicial/menú inicial donde se muestran las distintas actividades que puede realizar
 el usuario y el acceso al historial de actividades.
 
-![](Imágenes/Menu.png) 
+![](Imagenes/Menu.png) 
 
 ## Escena actividad
 
@@ -32,7 +32,9 @@ pulsando el botón save.
 
 Por otro lado toda escena de actividad ofrece la opción de volver al menú inicial pulsando dicho botón.
 
-![](Imágenes/ciclismo2.png) 
+
+![](FotosManual/ciclismo2.png)
+
 
 ## Historial de actividades
 
@@ -44,14 +46,15 @@ También se podrá seleccionar la celda mediante el botón edit que dará la pos
 a parte también se le ofrece al usuario la posibilidad de seleccionar una celda clicando en ella para ver en otra escena,
 detalle de la actividad, el mapa con el recorrido y los datos de esa activdad.
 
-![](Imágenes/historial.png)
+![](FotosManual/historial.png)
+
 
 ## Detalle de la actividad
 
 Selecionada la celda/actividad a consultar el usuario podrá visualizar en detalle accediendo a la escena de detalle
 qué recorrido realizó, la fecha, la duración, la fecha y la distancia.
 
-![](Imágenes/r2.jpeg)
+![](FotosManual/recorridoFinal.PNG)
 
 ## Documentación
 
